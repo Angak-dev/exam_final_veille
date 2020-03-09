@@ -39,7 +39,7 @@
         echo '</div>';
     endif;
 
-    function positionGrid($postAuthor){
+   /* function positionGrid($postAuthor){
         switch ($postAuthor) {
             case Luna:
                 return 1;
@@ -57,7 +57,7 @@
                 return 0;
                 break;
         }
-    }
+    }*/
 ?>
 
 <?php
