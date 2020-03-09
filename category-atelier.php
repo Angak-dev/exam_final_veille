@@ -2,7 +2,7 @@
     
     $args = array(
         'category_name' => 'Atelier',
-        'posts_per_page' => 10,
+        'posts_per_page' => 16,
     );
 
     $queryAtelier = new WP_Query($args);
@@ -18,7 +18,7 @@
         $queryAtelier->the_post();
         echo '
             <div class="content-post">
-                <h3 class="titre_atelier">' .get_the_title(). '</h3>
+                <p class="titre_atelier">' .get_the_title(). '__<span style=color:red;>' .get_post_field('post_name'). '</span>__<span style=color:blue;>' .get_the_author_meta('display_name', $post->post_author ).'</span></p> 
             </div>
         ';
     }
