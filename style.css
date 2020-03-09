@@ -3,9 +3,9 @@
 Theme Name: Exerice 9 - Child
 Theme URI: 127.0.0.1/tp2-veille
 Description: Child theme of Exercice 9 - Programmation et Veille Technologique
-Author: Mathieu Bourassa
-Author URI: 
-Template: Astral
+Author: Thiago Ferreira
+Author URI: thiagoferreira.ca
+Template: tp2-veille
 Version: 1.0
 Text Domain: exercice-9-child
 */
@@ -39,7 +39,7 @@ Text Domain: exercice-9-child
           align-items: center;
 }
 
-.site-header, .site-branding, .main-navigation .menu, .site-content .categorie-conferences .articles-conferences, .site-content .categorie-nouvelles .categorie-nouvelles-contenu, footer {
+.site-header, .site-branding, .site-content .categorie-conferences .articles-conferences, .site-content .categorie-nouvelles .categorie-nouvelles-contenu, footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,31 +90,47 @@ Text Domain: exercice-9-child
 
 .main-navigation {
   width: 50%;
-  height: auto;
+  height: 50%;
 }
 
 .main-navigation .menu {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding: 0;
 }
 
-.main-navigation .menu li {
+.main-navigation .menu ul {
+  padding: 0;
+}
+
+.main-navigation .menu ul li {
   margin: 0 5%;
   list-style: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.main-navigation .menu li a {
-  color: #111;
+.main-navigation .menu ul li a {
+  color: purple;
   text-decoration: none;
   text-transform: uppercase;
-  -webkit-transition: color 0.4s;
-  transition: color 0.4s;
 }
 
-.main-navigation .menu li a:hover {
+.main-navigation .menu ul li a:hover {
   color: #0978C0;
 }
 
@@ -133,10 +149,8 @@ body {
 .container-evenements {
   width: 90vw;
   border: 2px solid #111;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (30vw)[3];
-      grid-template-columns: repeat(3, 30vw);
+  /*display: grid;
+  grid-template-columns: repeat(3, 30vw);*/
   margin: 2%;
 }
 

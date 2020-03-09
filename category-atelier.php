@@ -13,6 +13,7 @@
 
 <?php
     echo '<div class="categorie-atelier">';
+    echo '<h1>Nos atelier de perfectionnements sont offerts 1 fois par mois</h1>';
 
     while ($queryAtelier->have_posts()) {
         $queryAtelier->the_post();

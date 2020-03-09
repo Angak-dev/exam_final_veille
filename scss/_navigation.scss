@@ -1,27 +1,32 @@
 .main-navigation {
   width: 50%;
-  height: auto;
+  height: 50%;
+  
 
   .menu {
-    @extend %displayFlexRowCenter;
-    justify-content: flex-end;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     margin: 0;
     padding: 0;
 
-    li {
-      margin: 0 5%;
-      list-style: none;
+    ul {
+      padding: 0;
 
-      a {
-        color: $black;
-        text-decoration: none;
-        text-transform: uppercase;
+      li {
+        margin: 0 5%;
+        list-style: none;
+        flex-direction: row;
+        align-items: center;
 
-        @include transition(color 0.4s);
+        a {
+          color: purple;
+          text-decoration: none;
+          text-transform: uppercase;
 
-        &:hover {
-          color: $blue;
+          &:hover {
+            color: $blue;
+          }
         }
       }
     }
